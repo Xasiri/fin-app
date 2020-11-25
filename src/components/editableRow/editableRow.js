@@ -28,21 +28,21 @@ const EditableRow = (props) => {
       <EditableField
         currency="true"
         type="statement"
-        edit={props.editability}
+        edit={!props.editability}
         changed={(event, fieldtype) => inputChangedHandler(event, fieldtype)}
       ></EditableField>
 
       <EditableField
         currency="true"
         type="adjustments"
-        edit={props.editability}
+        edit={!props.editability}
         changed={(event, fieldtype) => inputChangedHandler(event, fieldtype)}
       ></EditableField>
 
       <EditableField
         currency="true"
         type="revision"
-        edit={props.editability}
+        edit={!props.editability}
         changed={(event, fieldtype) => inputChangedHandler(event, fieldtype)}
       ></EditableField>
 

@@ -4,7 +4,6 @@ import EditableRow from "../editableRow/editableRow";
 import LabelRow from "../labelRow/labelRow";
 import * as actions from "../../store/actions/actionIndex";
 import { connect } from "react-redux";
-import { useCallback } from "react";
 
 const InputTable = (props) => {
   const rowList = props.rows.length
