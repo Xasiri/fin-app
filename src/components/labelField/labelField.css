@@ -1,0 +1,28 @@
+.Button {
+  background-color: rgb(198, 198, 216);
+  border-color: rgb(139, 139, 139);
+  color: rgb(61, 61, 61);
+  padding-top: 3.5px;
+  margin-left: 4.5px;
+  text-align: flex-start;
+
+  /* margin-right: 2.5px; */
+  padding-left: 15px;
+  width: 100%;
+  margin-top: 2px;
+  font-size: 12px;
+}
+
+.Prefix {
+  margin-right: 1px;
+  position: absolute;
+  color: rgb(131, 131, 131);
+  margin-left: 8px;
+  margin-top: 3.25px;
+}
+
+.Div {
+  display: flex;
+  width: 100%;
+  margin-top: 2px;
+}

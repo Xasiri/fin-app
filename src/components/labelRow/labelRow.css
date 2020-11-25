@@ -1,0 +1,42 @@
+.LabelRow {
+  display: flex;
+  justify-content: flex-start;
+  padding: 5px;
+  background-color: rgb(198, 198, 216);
+  margin-top: 2px;
+  padding-bottom: 8px;
+  flex-grow: 1;
+}
+
+.Icon {
+  transform: scale(0.65);
+  font-size: 50;
+  /* padding-left: 4px; */
+  /* margin-left: 4px; */
+  /* margin: 0; */
+  /* width: 10px; */
+  height: 10px;
+}
+
+.TotalLabel {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 0 0;
+  background-color: rgb(198, 198, 216);
+  margin-top: 2px;
+  padding-top: 2px;
+  padding-bottom: 8px;
+}
+
+.PIcon {
+  transform: scale(0.005);
+  font-size: 50;
+  height: 10px;
+  justify-content: space-between;
+  color: white;
+}
+
+.Span {
+  background-color: rgb(198, 198, 216);
+  color: rgb(198, 198, 216);
+}

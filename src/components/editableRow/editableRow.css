@@ -1,16 +1,18 @@
 .EditableRow {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 0 0 0 0;
-  background-color: rgb(202, 201, 201);
+  background-color: rgb(221, 224, 241);
   margin-top: 2px;
+  padding-bottom: 3px;
 }
 
 .Icon {
   transform: scale(0.65);
   font-size: 50;
-  padding: none;
-  margin: 0;
-  width: 10px;
+  /* padding-left: 4px; */
+  /* margin-left: 4px; */
+  /* margin: 0; */
+  /* width: 10px; */
   height: 10px;
 }

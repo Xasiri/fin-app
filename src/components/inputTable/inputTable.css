@@ -1,0 +1,28 @@
+.table {
+  display: flex;
+  width: 100%;
+  border-left: 5px;
+}
+
+.label {
+  display: flex;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-left: 2px;
+  border-color: black;
+  background-color: rgb(156, 151, 151);
+  padding-top: 3px;
+  text-align: center;
+  padding-bottom: 3px;
+}
+
+.labelBottom {
+  display: flex;
+  width: 100%;
+  border-left: 2px;
+  border-color: black;
+  background-color: rgb(156, 151, 151);
+  padding-top: 3px;
+  text-align: center;
+  padding-bottom: 3px;
+}

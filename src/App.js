@@ -1,14 +1,11 @@
-import EditableRow from "../src/components/editableRow/editableRow";
+import InputTable from "./components/inputTable/inputTable";
 import "./App.css";
 import React from "react";
 
 function App() {
   return (
     <div className="App">
-      <EditableRow></EditableRow>
-      <EditableRow></EditableRow>
-      <EditableRow></EditableRow>
-      <EditableRow></EditableRow>
+      <InputTable></InputTable>
     </div>
   );
 }
