@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-// import classes from "./inputTable.css";
+import classes from "./inputTable.css";
 import EditableRow from "../editableRow/editableRow";
 import LabelRow from "../labelRow/labelRow";
 import * as actions from "../../store/actions/actionIndex";
@@ -71,6 +71,9 @@ const InputTable = (props) => {
           hideIcons="true"
           total="true"
         ></LabelRow>
+      </div>
+      <div className={classes.label}>
+        <button className={classes.Button}>Submit</button>
       </div>
     </>
   );
