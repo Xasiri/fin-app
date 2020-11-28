@@ -1,1 +1,1 @@
-export { addRows, deleteRows, editRows, editInput } from "./inputActions";
+export { addRows, deleteRows, editRows, editInput, updateTotal } from "./inputActions";

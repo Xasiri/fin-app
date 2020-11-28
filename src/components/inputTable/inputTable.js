@@ -4,6 +4,7 @@ import EditableRow from "../editableRow/editableRow";
 import LabelRow from "../labelRow/labelRow";
 import * as actions from "../../store/actions/actionIndex";
 import { connect } from "react-redux";
+import axiosFire from "../../axios-fire";
 
 const InputTable = (props) => {
   const rowList = props.rows.length
@@ -39,6 +40,15 @@ const InputTable = (props) => {
     console.log("render InputTable");
   }, [props.rows]);
 
+
+   const submitButtonHandler = async () => {
+   await props.onTotalUpdated(statementTotal, adjustmentTotal, revisionTotal);
+    let table = props.state;
+    let res = await axiosFire.post('/taxinput.json',table);
+    console.log(res);
+
+  }
+
   return (
     <>
       <div>
@@ -73,7 +83,7 @@ const InputTable = (props) => {
         ></LabelRow>
       </div>
       <div className={classes.label}>
-        <button className={classes.Button}>Submit</button>
+        <button className={classes.Button} onClick={() =>submitButtonHandler()}>Submit</button>
       </div>
     </>
   );
@@ -83,12 +93,14 @@ const mapDispatchToProps = (dispatch) => {
   return {
     onRowAdded: () => dispatch(actions.addRows()),
     onRowRemoved: (removeId) => dispatch(actions.deleteRows(removeId)),
+    onTotalUpdated: (statementTotal, adjustmentTotal, revisionTotal) => dispatch(actions.updateTotal(statementTotal, adjustmentTotal, revisionTotal)),
   };
 };
 
 const mapStateToProps = (state) => {
   return {
     rows: state.income.rows,
+    state : state.income
   };
 };
 

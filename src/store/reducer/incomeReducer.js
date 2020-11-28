@@ -15,7 +15,6 @@ const reducer = (state = initialStateRow, action) => {
         name: "",
         statement: "",
         adjustments: "",
-        xx: "",
         revision: "",
         editable: true,
         income: "",
@@ -57,7 +56,14 @@ const reducer = (state = initialStateRow, action) => {
           }
         }),
       };
-
+      case actionTypes.UPDATE_TOTAL:
+        return {
+          ...state,
+          totalRevisions : action.revisionTotal,
+          totalStatements: action.statementTotal,
+          totalAdjustments: action.adjustmentTotal,
+          }
+        
     default:
       return state;
   }

@@ -23,21 +23,24 @@
   background-color: transparent;
   background-color: rgb(231, 231, 231);
   text-align: center;
-  border-color: rgb(39, 38, 38);
+  border-style: solid;
+  color: rgb(67, 87, 93);
+  border-color: teal(192, 188, 188);
   display: center;
   outline: none;
   padding-top: 3.5px;
   padding-bottom: 3px;
   cursor: pointer;
-  width: 20%;
+  width: 15%;
 
-  font-weight: bold;
+  font-weight: normal;
   text-align: center;
   border-radius: 5px;
 }
 
 .Button:hover {
-  background-color: rgb(141, 175, 91);
+  background-color:rgb(130, 187, 187);
+  border-color: rgb(116, 145, 145);
 }
 
 .Button:disabled {

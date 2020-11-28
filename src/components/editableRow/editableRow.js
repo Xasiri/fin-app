@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useState, useEffect } from "react";
 import classes from "./editableRow.css";
 import EditableField from "../editableField/editableField";
 import IconButton from "@material-ui/core/IconButton";
@@ -6,14 +6,22 @@ import EditIcon from "@material-ui/icons/Edit";
 import DeleteIcon from "@material-ui/icons/Delete";
 import * as actions from "../../store/actions/actionIndex";
 import { connect } from "react-redux";
+import debounce from "lodash.debounce";
 
-const EditableRow = (props) => {
+const EditableRow = React.memo((props) => {
   let showRow;
   let updatedKeyword;
 
+
+  
+  const debounceSave = debounce((updatedKeyword,idx,fieldtype) => 
+       props.onRowInputChanged(updatedKeyword,idx,fieldtype),2000);
+
   const inputChangedHandler = (event, fieldtype) => {
     updatedKeyword = event.target.value;
-    props.onRowInputChanged(updatedKeyword, props.idx, fieldtype);
+   
+    debounceSave(updatedKeyword, props.idx, fieldtype);
+       
     return updatedKeyword;
   };
 
@@ -68,7 +76,7 @@ const EditableRow = (props) => {
   );
 
   return showRow;
-};
+});
 
 const mapDispatchToProps = (dispatch) => {
   return {

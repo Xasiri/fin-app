@@ -29,3 +29,12 @@ export const editInput = (text, idInput, fieldtype) => {
     fieldtype: fieldtype,
   };
 };
+
+export const updateTotal = (adjustmentTotal, statementTotal, revisionTotal) => {
+  return {
+    type: actionTypes.UPDATE_TOTAL,
+    adjustmentTotal: adjustmentTotal,
+    statementTotal: statementTotal,
+    revisionTotal: revisionTotal,
+  };
+};
