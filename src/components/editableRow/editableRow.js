@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback } from "react";
 import classes from "./editableRow.css";
 import EditableField from "../editableField/editableField";
 import IconButton from "@material-ui/core/IconButton";
@@ -12,16 +12,20 @@ const EditableRow = React.memo((props) => {
   let showRow;
   let updatedKeyword;
 
-
-  
-  const debounceSave = useCallback(debounce((updatedKeyword,idx,fieldtype) => 
-       props.onRowInputChanged(updatedKeyword,idx,fieldtype),1000),[]);
+  const debounceSave = useCallback(
+    debounce(
+      (updatedKeyword, idx, fieldtype) =>
+        props.onRowInputChanged(updatedKeyword, idx, fieldtype),
+      1000
+    ),
+    []
+  );
 
   const inputChangedHandler = (event, fieldtype) => {
     updatedKeyword = event.target.value;
-   
+
     debounceSave(updatedKeyword, props.idx, fieldtype);
-       
+
     return updatedKeyword;
   };
 
