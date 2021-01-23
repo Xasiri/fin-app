@@ -1,4 +1,4 @@
-# Fin app preview for a business valuation web-app.
+# Fin app preview of a business valuation web-app.
 
 Reactjs custom form hooks - frontend
 
